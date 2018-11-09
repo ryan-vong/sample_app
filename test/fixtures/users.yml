@@ -1,4 +1,22 @@
 example:
-  name: Rails Tutorial
+  name: Example
   email: example@railstutorial.org
   password_digest: <%= User.digest('1T4urnoT!') %>
+  
+ivy:
+  name: Ivy
+  email: ivy@example.com
+  password_digest: <%= User.digest("1T4urnoT!") %>
+  
+ryan:
+  name: Ryan
+  email: ryan.vong88@gmail.com
+  password_digest: <%= User.digest("1T4urnoT!") %>
+  admin: true
+  
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
